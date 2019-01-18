@@ -6,14 +6,14 @@ curl "http://localhost:4741/gas_logs" \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "gas-log": {
+    "gas_log": {
       "date": "'"${DATE}"'",
       "odometer": "'"${ODO}"'",
       "volume": "'"${VOL}"'",
-      "type": "'"${TYPE}"'",
+      "fuel": "'"${TY}"'",
       "brand": "'"${BRAND}"'",
       "price": "'"${PRICE}"'",
-      "total": "'"${TOTAL}"'",
+      "total": "'"${TOTAL}"'"
     }
   }'
 

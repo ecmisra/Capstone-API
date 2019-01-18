@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_01_18_201406) do
     t.date "date"
     t.integer "odometer"
     t.integer "volume"
-    t.string "type"
+    t.string "fuel"
     t.string "brand"
     t.integer "price"
     t.integer "total"

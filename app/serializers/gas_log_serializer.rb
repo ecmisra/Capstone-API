@@ -1,3 +1,3 @@
 class GasLogSerializer < ActiveModel::Serializer
-  attributes :id, :date, :odometer, :volume, :type, :brand, :price, :total
+  attributes :id, :date, :odometer, :volume, :fuel, :brand, :price, :total
 end

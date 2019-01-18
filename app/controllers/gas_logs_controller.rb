@@ -1,4 +1,4 @@
-class GasLogsController < ApplicationController
+class GasLogsController < OpenReadController
   before_action :set_gas_log, only: [:show, :update, :destroy]
 
   # GET /gas_logs
@@ -46,6 +46,6 @@ class GasLogsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def gas_log_params
-      params.require(:gas_log).permit(:date, :odometer, :volume, :type, :brand, :price, :total)
+      params.require(:gas_log).permit(:date, :odometer, :volume, :fuel, :brand, :price, :total)
     end
 end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :gas_logs
+  resources :gas_logs, except: %i[new edit]
   # RESTful routes
   resources :examples, except: %i[new edit]
 

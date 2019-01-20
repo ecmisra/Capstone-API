@@ -46,6 +46,13 @@ class GasLogsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def gas_log_params
-      params.require(:gas_log).permit(:date, :odometer, :volume, :fuel, :brand, :price, :total)
+      params.require(:gas_log).permit(:date,
+                                      :odometer,
+                                      :volume,
+                                      :fuel,
+                                      :brand,
+                                      :price,
+                                      :total,
+                                      :user_id)
     end
 end

@@ -15,7 +15,7 @@ class GasLogsController < OpenReadController
 
   # POST /gas_logs
   def create
-    @gas_log = GasLog.new(gas_log_params)
+    @gas_log = current_user.gas_logs.build(gas_log_params)
 
     if @gas_log.save
       render json: @gas_log, status: :created, location: @gas_log

@@ -1,9 +1,9 @@
-class GasLogsController < OpenReadController
+class GasLogsController < ProtectedController
   before_action :set_gas_log, only: [:show, :update, :destroy]
 
   # GET /gas_logs
   def index
-    @gas_logs = GasLog.all
+    @gas_logs = current_user.gas_logs
 
     render json: @gas_logs
   end

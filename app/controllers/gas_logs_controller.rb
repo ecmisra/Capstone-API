@@ -41,7 +41,7 @@ class GasLogsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_gas_log
-      @gas_log = GasLog.find(params[:id])
+      @gas_log = current_user.gas_logs.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

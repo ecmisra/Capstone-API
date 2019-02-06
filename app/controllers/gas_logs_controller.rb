@@ -52,7 +52,6 @@ class GasLogsController < ProtectedController
                                       :fuel,
                                       :brand,
                                       :price,
-                                      :total,
                                       :user_id)
     end
 end
